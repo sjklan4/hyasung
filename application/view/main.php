@@ -42,54 +42,59 @@
         </div>
       </div>
       <!-- <a href="/user/regist">회원가입2</a> -->
-    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">해외</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">항공</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">전세버스</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact1" type="button" role="tab" aria-controls="contact" aria-selected="false">국내</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact2" type="button" role="tab" aria-controls="contact" aria-selected="false">호텔</button>
-        </li>
-      </ul>
-      <div class="tab-content justify-content-center" id="myTabContent">
-        <div class="tab-pane " id="home" role="tabpanel" aria-labelledby="home-tab">
-            <a href="">동남아</a>
-            <a href="">일본</a>
-            <a href="">중국</a>
-            <a href="">대만</a>
-            <a href="">유럽</a>
-        </div>
-        <div class="tab-pane fade justify-content-center text-center" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <a href="">대한항공</a>
-            <a href="">아시아나</a>
-            <a href="">스타얼라이언스</a>
-            <a href="">제주항공/에어부산</a>
-        </div>
-        <div class="tab-pane fade justify-content-center text-center" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <a href="">test</a>
-            <a href="">test</a>
-            <a href="">test</a>
-        </div>
-        <div class="tab-pane fade justify-content-center text-center" id="contact1" role="tabpanel" aria-labelledby="contact-tab">
-            <a href="">test</a>
-            <a href="">test</a>
-            <a href="">test</a>
-        </div>
-        <div class="tab-pane fade justify-content-center text-center" id="contact2" role="tabpanel" aria-labelledby="contact-tab">
-            <a href="">test</a>
-            <a href="">test</a>
-            <a href="">test</a>
-        </div>
-    </div>
-
+      <nav id="topMenu">
+        <ul>
+        <li class="topMenuLi"> <a class="menuLink" href="">해외</a>
+              <ul class="submenu">
+                <li><a href="" class="submenuLink longLink">1</a></li>
+                <li><a href="" class="submenuLink longLink">2</a></li>
+                <li><a href="" class="submenuLink longLink">3</a></li>
+                <li><a href="" class="submenuLink longLink">4</a></li>
+                <li><a href="" class="submenuLink longLink">5</a></li>
+              </ul>
+          </li>
+          <li>|</li>
+          <li class="topMenuLi"> <a class="menuLink" href="">항공</a>
+            <ul class="submenu">
+              <li><a href="" class="submenuLink">1</a></li> 
+              <li><a href="" class="submenuLink">2</a></li>
+              <li><a href="" class="submenuLink">3</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="topMenuLi"> <a class="menuLink" href="">전세버스</a>
+            <ul class="submenu">
+              <li><a href="" class="submenuLink">1</a></li> 
+              <li><a href="" class="submenuLink">2</a></li>
+              <li><a href="" class="submenuLink">3</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="topMenuLi"> <a class="menuLink" href="">국내</a>
+            <ul class="submenu">
+              <li><a href="" class="submenuLink">1</a></li> 
+              <li><a href="" class="submenuLink">2</a></li>
+              <li><a href="" class="submenuLink">3</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="topMenuLi"> <a class="menuLink" href="">호텔</a>
+            <ul class="submenu">
+              <li><a href="" class="submenuLink">1</a></li> 
+              <li><a href="" class="submenuLink">2</a></li>
+              <li><a href="" class="submenuLink">3</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="topMenuLi"> <a class="menuLink" href="">입찰</a>
+            <ul class="submenu">
+              <li><a href="" class="submenuLink">1</a></li> 
+              <li><a href="" class="submenuLink">2</a></li>
+              <li><a href="" class="submenuLink">3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -277,7 +282,7 @@
       </div>
     </div>
 
-
+ 
 
 <?php require_once(_PATH_FOOTER) ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>      
