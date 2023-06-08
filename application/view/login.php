@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,71 +9,125 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
 </head>
+
 <body>
 
-<?php require_once(_PATH_HEADER) ?>
-<div class="container">
-  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-    <div class="row">
-        <div class="col-md-6"><h1><img src="/application/view/imgfile/title.PNG" class="title_img"></h1></div>
-        <div class="col-md-4">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/application/view/imgfile/pagein/account_img/kor5.jpg" class="d-block w-100" alt="...">
+    <?php require_once(_PATH_HEADER) ?>
+    <div class="container">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="col-md-6">
+                <h1><img src="/application/view/imgfile/title.PNG" class="title_img"></h1>
+            </div>
+            <div class="col-md-4">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/application/view/imgfile/pagein/account_img/kor5.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/application/view/imgfile/pagein/account_img/northeuro1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/application/view/imgfile/pagein/account_img/northeuro2.jpg" class="d-block w-100" alt="...">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/application/view/imgfile/pagein/account_img/northeuro1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/application/view/imgfile/pagein/account_img/northeuro2.jpg" class="d-block w-100" alt="...">
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            </div>
         </div>
-        </div>
-    </div>
-  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <div class="row" >
-        <div class="col-6 col-md-6">
-        <form action="/user/login" method="post">
-                <label for="id"></label>
-                <input type="text" name ="u_id" id ="id" placeholder = "아이디 입력">
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+            <div class="col-6 col-md-6">
+                <form action="/user/login" method="post">
+                    <label for="id"></label>
+                    <input type="text" name="u_id" id="id" placeholder="아이디 입력">
+                    <br>
+                    <label for="pw"></label>
+                    <input type="password" name="u_pw" id="pw" placeholder="비밀번호 입력">
+                    <br>
+                    <button type="submit" class="login_btn">로그인</button>
+                    <h3 style="color: red;"><?php echo isset($this->errMsg) ? $this->errMsg : ""; ?></h3>
+                    <a href="/application/view/findpage.php">아이디 찾기</a>
+                    <a href="/application/view/findpage.php">비밀번호 찾기</a>
+                    <button type="button" class="btn btn-light" onclick="location.href ='/user/regist'">회원가입</button>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-6">
+                <div class="naver_acc">네이버 아이디로 로그인</div>
                 <br>
-                <label for="pw"></label>
-                <input type="password" name = "u_pw" id = "pw" placeholder = "비밀번호 입력">
-                <br>
-                <button type ="submit" class = "login_btn">로그인</button>
-                <h3 style = "color: red;"><?php echo isset($this->errMsg) ? $this->errMsg : ""; ?></h3>
-                <a href="/application/view/findpage.php">아이디 찾기</a>
-                <a href="/application/view/findpage.php">비밀번호 찾기</a>
-                <button type="button" class="btn btn-light"  onclick="location.href ='/user/regist'">회원가입</button>
-            </form>
+
+                <div class="kakao_acc">
+                    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.2.0/kakao.min.js" integrity="sha384-x+WG2i7pOR+oWb6O5GV5f1KN2Ko6N7PTGPS7UlasYWNxZMKQA63Cj/B2lbUmUfuC" crossorigin="anonymous"></script>
+                    <script>
+                        Kakao.init('ba686e25c3636429808da12637d71570'); // 사용하려는 앱의 JavaScript 키 입력
+                    </script>
+
+                    <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+                        <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222" alt="카카오 로그인 버튼" />
+                    </a>
+                    <p id="token-result"></p>
+                    <script>
+                        function loginWithKakao() {
+                            Kakao.Auth.authorize({
+                                redirectUri: 'http://localhost',
+                            });
+                        }
+                    </script>
+
+
+
+
+
+
+
+
+
+                    <!-- <a href="javascript:kakaoLogin();"><img src="/application/view/imgfile/kakao_login_medium_wide.png" alt="error"></a>
+                    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.2.0/kakao.min.js" integrity="sha384-x+WG2i7pOR+oWb6O5GV5f1KN2Ko6N7PTGPS7UlasYWNxZMKQA63Cj/B2lbUmUfuC" crossorigin="anonymous"></script>
+                    <script>
+                        window.Kakao.init("ba686e25c3636429808da12637d71570")
+
+                        function kakaoLogin(){
+                            window.Kakao.Auth.login({
+                                scope:'profile_nickname, account_email, gender',
+                                success: function(authObj){
+                                    console.log(authObj);
+                                    window.Kakao.API.request({
+                                        url:'/v2/user/me',
+                                        success: res => {
+                                            const Kakao_account = res.kakao_account;
+                                            console.log(kakao_account);
+                                        }
+                                    });
+                                        
+                                }
+                        });
+                    }
+                    </script> -->
+                </div>
+            </div>
         </div>
 
-        <div class="col-6 col-md-6">
-            <div class ="naver_acc">네이버 아이디로 로그인</div>
-            <br>
-            <div class = "kakao_acc">카카오 계정으로 로그인</div>
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row">
+            <div class="col-6">.col-6</div>
+            <div class="col-6">.col-6</div>
         </div>
     </div>
+    <!-- ba686e25c3636429808da12637d71570 -->
 
-  <!-- Columns are always 50% wide, on mobile and desktop -->
-    <div class="row">
-        <div class="col-6">.col-6</div>
-        <div class="col-6">.col-6</div>
-    </div>
-</div>
+    <?php require_once(_PATH_FOOTER) ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-
-<?php require_once(_PATH_FOOTER) ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+
 </html>
